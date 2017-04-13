@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">JB</string>
+    <string-array name="item">
+        <item>Burgers</item>
+        <item>Noodles</item>
+        <item>Breakfast</item>
+        <item>Desserts and Floats</item>
+        <item>Chickenjoy</item>
+        <item>Rice Meals</item>
+        <item>Sides</item>
+        <item>Kids Meal</item>
+    </string-array>
+</resources>
