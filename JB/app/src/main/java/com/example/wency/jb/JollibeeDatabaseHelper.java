@@ -56,6 +56,31 @@ public class JollibeeDatabaseHelper extends SQLiteOpenHelper{
         insertFood(db,"Coke Float", "Creamy vanilla twirl on ice-cold Coke with choco syrup.",  R.drawable.cokefloat, "Dessert");
         insertFood(db,"Cone Twirl Krunchy Chocolate", "Creamy vanilla soft serve dipped in chocolate-flavored coating sprinkled with rice crispies.",  R.drawable.chocotwirl, "Dessert");
         insertFood(db,"Cone Twirl Vanilla", "Creamy vanilla softserve on a cone.",  R.drawable.vanillatwirl, "Dessert");
+
+        //chickenjoy
+        insertFood(db,"1-pc Chickenjoy (Original or Spicy)", "The Best Fried Chicken! Crispylicious, Juicylicious! Jollibee's perfectly seasoned fried chicken that's crispy on the outside; tender and juicy on the inside",  R.drawable.one, "Chickenjoy");
+        insertFood(db,"2-pc Chickenjoy (Original or Spicy)", "The Best Fried Chicken! Crispylicious, Juicylicious! Jollibee's perfectly seasoned fried chicken that's crispy on the outside; tender and juicy on the inside",  R.drawable.two, "Chickenjoy");
+        insertFood(db,"Chicken Bucket", "Enjoy 6 or 8 pcs of your favorite crispylicious, juicylicious Chickenjoy! Upgrades are available so you can complete your with rice or spaghetti and regular soft drinks or Nestea!",  R.drawable.bucket, "Chickenjoy");
+
+        //rice meals
+        insertFood(db,"Garlic Pepper Beef", "Juicy Beef Strips topped with flavorful pepper sauce and garlic bits",  R.drawable.garlicpepper, "Rice Meal");
+        insertFood(db,"Ultimate Burger Steak", "Made from the 100% pure beef goodness of a 1/3 pound CHAMP patty, served on top of tasty fries, and poured with savory mushroom gravy thatâ€™s sprinkled with toasted garlic bits. A sunny-side up egg on steamed rice completes this satisfying meal experience.",  R.drawable.ubs, "Rice Meal");
+        insertFood(db,"Garlic Bangus", "Marinated bangus seasoned with special ingredients fried to a light crisp, topped with garlic sauce and toasted garlic bits, served with a slice of tomato and plain rice. ",  R.drawable.bangus, "Rice Meal");
+        insertFood(db,"Burger Steak", "100% pure beef patties that come with a hearty serving of our flavorful mushroom gravy and steamed rice.",  R.drawable.bs, "Rice Meal");
+        insertFood(db,"Shanghai Rolls", "5 pieces of your favorite crispy-sarap shanghai rolls",  R.drawable.shang, "Rice Meal");
+
+        //sides
+        insertFood(db,"Butterd Corn", "Golden yellow corn kernels with butter",  R.drawable.corn, "Sides");
+        insertFood(db,"Peach Mango Pie", "Golden brown, flaky, slightly sweet crust with a pleasant blend of diced peaches and mango filling in thick sauce.", R.drawable.peach, "Sides");
+        insertFood(db,"Jolly Hotdog", "Mildly seasoned all-meat hotdog in a warm hotdog roll, garnished with a slightly tangy, cheese-based topping and livened up with grated cheese and tomato catsup.",  R.drawable.jolly, "Sides");
+        insertFood(db,"Jolly Crispy Fries", "Light to golden brown crispy potato strips, made from choice potatoes.",  R.drawable.fried, "Sides");
+        insertFood(db,"Macaroni Soup", "A hearty cream of chicken soup with macaroni noodles, carrots, chicken chunks, bits of ham, and corn.",  R.drawable.soup, "Sides");
+
+        //kids meal
+        insertFood(db,"Jolly Spaghetti with Softdrink + Toy + free Vanilla Cone Twirl", "Jollibee’s sweet style spaghetti sauce-now the tastiest and meatiest ever from Jollibee! With the chunkiest slices of savory ham and sausages, loaded with ground beef, served over premium quality noodles and topped with lots of cheese. Jollibee Spaghetti – the Spaghettiest!",  R.drawable.spagmeal, "Kids Meal");
+        insertFood(db,"Yum with Softdrink + Toy + free Vanile Cone Twirl", "Made with 100% pure beef patty served with our very own special burger dressing all in a soft bun",  R.drawable.yummeal, "Kids Meal");
+        insertFood(db,"Chickenjoy with Softdrink + Toy + free Vanilla Cone Twirl", "The Best Fried Chicken! Crispylicious, Juicylicious! Jollibee’s perfectly seasoned fried chicken that’s crispy on the outside; tender and juicy on the inside",  R.drawable.chickenmeal, "Kids Meal");
+
     }
 
     @Override

@@ -176,6 +176,150 @@ public class DetailActivity extends AppCompatActivity {
                 db.close();
             }catch(SQLiteException e){}
         }
+
+        if(food.equals("chickenjoy")){
+            int chickenjoyNo = (Integer) getIntent().getExtras().get(EXTRA_CHICKENJOYNO) ;
+            try{
+                SQLiteOpenHelper jollibeeDatabaseHelper = new JollibeeDatabaseHelper(this);
+                SQLiteDatabase db = jollibeeDatabaseHelper.getReadableDatabase();
+
+                Cursor cursor = db.query("FOOD",
+                        new String[] {"NAME", "DESCRIPTION", "IMAGE_RESOURCE_ID"},
+                        "_id = ? and FOOD_TYPE = ?",
+                        new String[] {Integer.toString(chickenjoyNo), "Chickenjoy"},
+                        null, null, null);
+
+                if(cursor.moveToFirst()){
+                    String nameText = cursor.getString(0);
+                    String descriptionText = cursor.getString(1);
+                    int photoId = cursor.getInt(2);
+
+                    TextView name = (TextView) findViewById(R.id.name);
+                    name.setText(nameText);
+
+                    TextView description = (TextView) findViewById(R.id.description);
+                    description.setText(descriptionText);
+
+                    ImageView photo = (ImageView) findViewById(R.id.photo);
+                    photo.setImageResource(photoId);
+                    photo.setContentDescription(nameText);
+                }
+
+                Toast toast = Toast.makeText(this, "Database Success", Toast.LENGTH_LONG);
+                toast.show();
+
+                cursor.close();
+                db.close();
+            }catch(SQLiteException e){}
+        }
+
+        if(food.equals("ricemeal")){
+            int ricemealNo = (Integer) getIntent().getExtras().get(EXTRA_RICEMEALNO) ;
+            try{
+                SQLiteOpenHelper jollibeeDatabaseHelper = new JollibeeDatabaseHelper(this);
+                SQLiteDatabase db = jollibeeDatabaseHelper.getReadableDatabase();
+
+                Cursor cursor = db.query("FOOD",
+                        new String[] {"NAME", "DESCRIPTION", "IMAGE_RESOURCE_ID"},
+                        "_id = ? and FOOD_TYPE = ?",
+                        new String[] {Integer.toString(ricemealNo), "Rice Meal"},
+                        null, null, null);
+
+                if(cursor.moveToFirst()){
+                    String nameText = cursor.getString(0);
+                    String descriptionText = cursor.getString(1);
+                    int photoId = cursor.getInt(2);
+
+                    TextView name = (TextView) findViewById(R.id.name);
+                    name.setText(nameText);
+
+                    TextView description = (TextView) findViewById(R.id.description);
+                    description.setText(descriptionText);
+
+                    ImageView photo = (ImageView) findViewById(R.id.photo);
+                    photo.setImageResource(photoId);
+                    photo.setContentDescription(nameText);
+                }
+
+                Toast toast = Toast.makeText(this, "Database Success", Toast.LENGTH_LONG);
+                toast.show();
+
+                cursor.close();
+                db.close();
+            }catch(SQLiteException e){}
+        }
+
+        if(food.equals("sides")){
+            int sidesNo = (Integer) getIntent().getExtras().get(EXTRA_SIDESNO) ;
+            try{
+                SQLiteOpenHelper jollibeeDatabaseHelper = new JollibeeDatabaseHelper(this);
+                SQLiteDatabase db = jollibeeDatabaseHelper.getReadableDatabase();
+
+                Cursor cursor = db.query("FOOD",
+                        new String[] {"NAME", "DESCRIPTION", "IMAGE_RESOURCE_ID"},
+                        "_id = ? and FOOD_TYPE = ?",
+                        new String[] {Integer.toString(sidesNo), "Sides"},
+                        null, null, null);
+
+                if(cursor.moveToFirst()){
+                    String nameText = cursor.getString(0);
+                    String descriptionText = cursor.getString(1);
+                    int photoId = cursor.getInt(2);
+
+                    TextView name = (TextView) findViewById(R.id.name);
+                    name.setText(nameText);
+
+                    TextView description = (TextView) findViewById(R.id.description);
+                    description.setText(descriptionText);
+
+                    ImageView photo = (ImageView) findViewById(R.id.photo);
+                    photo.setImageResource(photoId);
+                    photo.setContentDescription(nameText);
+                }
+
+                Toast toast = Toast.makeText(this, "Database Success", Toast.LENGTH_LONG);
+                toast.show();
+
+                cursor.close();
+                db.close();
+            }catch(SQLiteException e){}
+        }
+
+        if(food.equals("kidsmeal")){
+            int kidsmealNo = (Integer) getIntent().getExtras().get(EXTRA_KIDSMEALNO) ;
+            try{
+                SQLiteOpenHelper jollibeeDatabaseHelper = new JollibeeDatabaseHelper(this);
+                SQLiteDatabase db = jollibeeDatabaseHelper.getReadableDatabase();
+
+                Cursor cursor = db.query("FOOD",
+                        new String[] {"NAME", "DESCRIPTION", "IMAGE_RESOURCE_ID"},
+                        "_id = ? and FOOD_TYPE = ?",
+                        new String[] {Integer.toString(kidsmealNo), "Kids Meal"},
+                        null, null, null);
+
+                if(cursor.moveToFirst()){
+                    String nameText = cursor.getString(0);
+                    String descriptionText = cursor.getString(1);
+                    int photoId = cursor.getInt(2);
+
+                    TextView name = (TextView) findViewById(R.id.name);
+                    name.setText(nameText);
+
+                    TextView description = (TextView) findViewById(R.id.description);
+                    description.setText(descriptionText);
+
+                    ImageView photo = (ImageView) findViewById(R.id.photo);
+                    photo.setImageResource(photoId);
+                    photo.setContentDescription(nameText);
+                }
+
+                Toast toast = Toast.makeText(this, "Database Success", Toast.LENGTH_LONG);
+                toast.show();
+
+                cursor.close();
+                db.close();
+            }catch(SQLiteException e){}
+        }
     }
 
 }

@@ -109,6 +109,86 @@ public class BurgerCategoryActivity extends ListActivity {
                 lister.setAdapter(listAdapter);
             }catch (SQLiteException e){}
         }
+
+        if(food.equals("chickenjoy")){
+            try{
+                SQLiteOpenHelper jollibeeDatabaseHelper = new JollibeeDatabaseHelper(this);
+                db = jollibeeDatabaseHelper.getReadableDatabase();
+
+                cursor = db.query("FOOD",
+                        new String[] {"_id", "NAME", "FOOD_TYPE"},
+                        "FOOD_TYPE = ?",
+                        new String[] {"Chickenjoy"},
+                        null, null, null);
+
+                CursorAdapter listAdapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1,
+                        cursor,
+                        new String[] {"NAME"},
+                        new int[] {android.R.id.text1},
+                        0);
+                lister.setAdapter(listAdapter);
+            }catch (SQLiteException e){}
+        }
+
+        if(food.equals("ricemeal")){
+            try{
+                SQLiteOpenHelper jollibeeDatabaseHelper = new JollibeeDatabaseHelper(this);
+                db = jollibeeDatabaseHelper.getReadableDatabase();
+
+                cursor = db.query("FOOD",
+                        new String[] {"_id", "NAME", "FOOD_TYPE"},
+                        "FOOD_TYPE = ?",
+                        new String[] {"Rice Meal"},
+                        null, null, null);
+
+                CursorAdapter listAdapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1,
+                        cursor,
+                        new String[] {"NAME"},
+                        new int[] {android.R.id.text1},
+                        0);
+                lister.setAdapter(listAdapter);
+            }catch (SQLiteException e){}
+        }
+
+        if(food.equals("sides")){
+            try{
+                SQLiteOpenHelper jollibeeDatabaseHelper = new JollibeeDatabaseHelper(this);
+                db = jollibeeDatabaseHelper.getReadableDatabase();
+
+                cursor = db.query("FOOD",
+                        new String[] {"_id", "NAME", "FOOD_TYPE"},
+                        "FOOD_TYPE = ?",
+                        new String[] {"Sides"},
+                        null, null, null);
+
+                CursorAdapter listAdapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1,
+                        cursor,
+                        new String[] {"NAME"},
+                        new int[] {android.R.id.text1},
+                        0);
+                lister.setAdapter(listAdapter);
+            }catch (SQLiteException e){}
+        }
+
+        if(food.equals("kidsmeal")){
+            try{
+                SQLiteOpenHelper jollibeeDatabaseHelper = new JollibeeDatabaseHelper(this);
+                db = jollibeeDatabaseHelper.getReadableDatabase();
+
+                cursor = db.query("FOOD",
+                        new String[] {"_id", "NAME", "FOOD_TYPE"},
+                        "FOOD_TYPE = ?",
+                        new String[] {"Kids Meal"},
+                        null, null, null);
+
+                CursorAdapter listAdapter = new SimpleCursorAdapter(this, android.R.layout.simple_list_item_1,
+                        cursor,
+                        new String[] {"NAME"},
+                        new int[] {android.R.id.text1},
+                        0);
+                lister.setAdapter(listAdapter);
+            }catch (SQLiteException e){}
+        }
     }
 
     @Override
@@ -149,6 +229,34 @@ public class BurgerCategoryActivity extends ListActivity {
             Intent intent = new Intent(BurgerCategoryActivity.this, DetailActivity.class);
             intent.putExtra(DetailActivity.EXTRA_DESSERTNO, (int) id);
             intent.putExtra("message", "dessert");
+            startActivity(intent);
+        }
+
+        if(food.equals("chickenjoy")){
+            Intent intent = new Intent(BurgerCategoryActivity.this, DetailActivity.class);
+            intent.putExtra(DetailActivity.EXTRA_CHICKENJOYNO, (int) id);
+            intent.putExtra("message", "chickenjoy");
+            startActivity(intent);
+        }
+
+        if(food.equals("ricemeal")){
+            Intent intent = new Intent(BurgerCategoryActivity.this, DetailActivity.class);
+            intent.putExtra(DetailActivity.EXTRA_RICEMEALNO, (int) id);
+            intent.putExtra("message", "ricemeal");
+            startActivity(intent);
+        }
+
+        if(food.equals("sides")){
+            Intent intent = new Intent(BurgerCategoryActivity.this, DetailActivity.class);
+            intent.putExtra(DetailActivity.EXTRA_SIDESNO, (int) id);
+            intent.putExtra("message", "sides");
+            startActivity(intent);
+        }
+
+        if(food.equals("kidsmeal")){
+            Intent intent = new Intent(BurgerCategoryActivity.this, DetailActivity.class);
+            intent.putExtra(DetailActivity.EXTRA_KIDSMEALNO, (int) id);
+            intent.putExtra("message", "kidsmeal");
             startActivity(intent);
         }
     }
